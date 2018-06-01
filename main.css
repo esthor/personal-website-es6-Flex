@@ -1,0 +1,186 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);    
+  }
+
+
+  .topLeft {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background: rgb(240, 240, 240);
+    min-width: 375px;
+  }
+
+  .content { 
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+    background: #FAFAFA;
+    min-width: 400px;
+  }
+
+  .leftMenu {
+    grid-column: 1;
+    grid-row: 3 / 4;
+    background: #D8D8D8;
+    min-width: 375px;
+  }
+
+  .bottomLeft {
+      grid-column: 1;
+      grid-row: 4;
+      background: #FAFAFA;
+      min-width: 375px;
+  }
+
+  .footer {
+      grid-column: 2 / 4;
+      grid-row: 4;
+      font-family: Roboto;
+      font-weight: bold;
+      text-align: center;
+      font-size: 13px;
+      color: #9966ff;
+      background: #FAFAFA;
+      padding-top: 13px;
+      min-width: 400px;
+      padding-right: 5%;
+  }
+
+/* topLeft Grid   */
+  .avatar {
+      border-radius: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+
+  .name {
+    /* ERIK THORELLI: */
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 64px;
+    color: #4A4A4A;
+    text-align: center;
+    padding-top: 4%;
+    /* padding-bottom: 4%; */
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .name p {
+      font-size: 13px;
+      padding: 0%;
+  }
+
+  /* leftMenu Grid */
+  
+  .innerLeftMenu {
+      padding-top: 18%;
+      padding-bottom: 18%;
+      padding-left: 12%;
+      font-family: Roboto;
+      font-weight: bold;
+      font-size: 64px;
+      color: #4A4A4A;
+      text-transform: uppercase;
+  }
+
+  /* Should be bold gray and when moused over should light up  */
+  .navItem {
+    padding-bottom: 8%;
+    
+  }
+
+  .lastNavItem {
+    /* No extra padding a.k.a. hacking it */
+  }
+
+  .currentNavItem {
+      color: #FAFAFA;
+      padding-bottom: 8%;
+  }
+
+a {
+    text-decoration: none;
+    color: rgb(31, 31, 31);
+}
+
+a:visited {
+    /* color: #4A4A4A; */
+    text-decoration: none;
+}
+
+a:hover {
+    /* color: rgb(114, 116, 206); */
+    /* color: #C85FEB; */
+    /* color: #B19CD9; */
+    
+    /* Websafe and bright */
+    color: #9966ff;
+
+}
+
+a:active {
+    color: #FAFAFA;
+}
+
+
+.content-header {
+    font-family: Roboto;
+    font-size: 42px;
+    font-weight: bold;
+    padding-top: 0%;
+    padding-left: 5%;
+    text-transform: uppercase;
+}
+
+.content {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+p {
+    padding-top: 18px;
+}
+
+.content  a {
+    font-weight: bolder;
+}
+
+.content h2 {
+    font-weight: 700;
+    /* font-size: 18px; */
+}
+
+.media-player {
+    text-align: center;
+}
+
+audio {
+    width: 500px;
+}
+
+.social-links {
+    /* vertical-align: middle; */
+    display: flex;
+    align-items:center;
+}
+
+.social-logo {
+    width: 104px;
+    max-width: 104px;
+}
+/* 
+.social-links a {
+    vertical-align: top;
+} */
+
+.social-links img {
+    vertical-align: middle;
+}
