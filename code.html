@@ -19,24 +19,36 @@
 </head>
 <body>
     <div class="container">
-        <div class="topLeft">
-            <div class="avatar-div">
-                <img class="avatar" src="img/erik.jpg" alt="photo of Erik Thorelli looking smart" height="204px">
-            </div>            
-            <div class="name">
-                <a href="./index.html">Erik Thorelli</a>
-                <p> Location: <a href="https://www.yelp.com/biz/good-mong-kok-bakery-san-francisco"> San Francisco</a> | Last updated: 2018.05.31</p>
+        <div class="leftSide">
+            <div class="topLeft">
+                <div class="avatar-div">
+                    <img class="avatar" src="img/erik.jpg" alt="photo of Erik Thorelli looking smart" height="204px">
+                </div>            
+                <div class="name">
+                    <a href="./index.html">Erik Thorelli</a>
+                    <p> Location: <a href="https://www.yelp.com/biz/good-mong-kok-bakery-san-francisco"> San Francisco</a> | Last updated: 2018.05.31</p>
+                </div>
+            </div>       
+            <div class="leftMenu">
+                <div class="innerLeftMenu">
+                    <div class="navItem"><a href="./music.html">MUSIC</a></div>
+                    <div class="navItem"><a href="./blog.html">BLOG</a></div>
+                    <div class="currentNavItem">CODE</div>
+                    <div class="navItem"><a href="./design.html">DESIGN</a></div>
+                    <div class="lastNavItem"><a href="./contact.html">CONTACT</a></div>
+                </div>
             </div>
-        </div>       
+        </div>
         <div class="content">
             <div class="content-header">CODE PROJECTS</div>
-            <div class="content">
+            <div class="content-content">
                 <p>I spend most of my time coding professionally in modern JavaScript frameworks like React and React Native. In my free time coding I try out different languages, explore and customize my environments and tooling, and use my coding and data science skills in areas that I'm especially passionate about, like politics, the environment and music creation.</p>
                 <p>Below, I will briefly highlight some projects, with links to more info where appropriate.</p>
                 <br>
                 <h2>Project: <a href="./index.html">Portfolio (This Site!)</a></h2>
                 <p>The idea behind this portfolio site is to showcase a little bit about who I am and where my intellectual and creative energy is spent.</p>
-                <p>I have chosen to build this site from scratch using only vanilla web languages, wihtout the assistance of any third-party libraries, frameworks or templates. It feels like it has been so long since I have actually worked with vanilla HTML/CSS/JS, and I felt these foundations of the web get a bad rap given how hyped frameworks are. But for a simple portfolio site, I don't need a Virtual DOM, server-side rendering, or other bells and whistles that pay dividends only at scale.</p>
+                <p>I have chosen to build this site from scratch using only vanilla web languages, without the assistance of any third-party libraries, frameworks or templates. I have implemented the layout here using my homemade flexbox layout. You can find <a href="https://github.com/esthor/personal-website-es6-Grid">my CSS Grid implentation here</a>.</p>
+                <p>It feels like it has been so long since I have actually worked with vanilla HTML/CSS/JS, and I felt these foundations of the web get a bad rap given how hyped frameworks are. But for a simple portfolio site, I don't need a Virtual DOM, server-side rendering, or other bells and whistles that pay dividends only at scale.</p>
                 <p>That said, I may at some point refactor this site in a framework like React, just for fun and to explore some less-than-production-ready features and plugins.</p>
                 <br>
                 <h2>Project: <a href="https://github.com/esthor/marxian-split" target="_blank">Marxian Split</a></h2>
@@ -44,17 +56,7 @@
                 <p>I don't know how useful it is, but it's a way to think about income inequality and put your money where your mouth is. Right now it's just an in-browser script, but I intend to use it as a 'Hello World' app for trying out different frameworks with a little more logic than a <code>print</code> command.</p>
             </div>
         </div>
-        <div class="leftMenu">
-            <div class="innerLeftMenu">
-                <div class="navItem"><a href="./music.html">MUSIC</a></div>
-                <div class="navItem"><a href="./blog.html">BLOG</a></div>
-                <div class="currentNavItem">CODE</div>
-                <div class="navItem"><a href="./design.html">DESIGN</a></div>
-                <div class="navItem"><a href="./contact.html">CONTACT</a></div>
-            </div>
-        </div>
-        <div class="footer">Made with ❤️ by Erik Thorelli  |  Copyright 2018</div>
-        <div class="bottomLeft"></div>    
     </div>
+    <div class="footer">Made with ❤️ by Erik Thorelli  |  Copyright 2018</div>
 </body>
 </html>

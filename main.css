@@ -1,106 +1,116 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);    
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin: 10px;
   }
 
+.leftSide {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    margin-top: 10px;
+    overflow: hidden;
+}
 
-  .topLeft {
-    grid-column: 1;
-    grid-row: 1 / 3;
+.topLeft {
     background: rgb(240, 240, 240);
-    min-width: 375px;
-  }
+    width: 100%;
+    margin-bottom: 10px;
+}
 
-  .content { 
-    grid-column: 2 / 4;
-    grid-row: 1 / 4;
+.content {
     background: #FAFAFA;
-    min-width: 400px;
-  }
+    width: 75%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
 
-  .leftMenu {
-    grid-column: 1;
-    grid-row: 3 / 4;
+.leftMenu {
     background: #D8D8D8;
-    min-width: 375px;
+    width: 100%;
+    
   }
-
-  .bottomLeft {
-      grid-column: 1;
-      grid-row: 4;
+  
+  /* .bottomLeft {
       background: #FAFAFA;
       min-width: 375px;
-  }
-
-  .footer {
-      grid-column: 2 / 4;
-      grid-row: 4;
-      font-family: Roboto;
-      font-weight: bold;
-      text-align: center;
-      font-size: 13px;
-      color: #9966ff;
-      background: #FAFAFA;
-      padding-top: 13px;
-      min-width: 400px;
-      padding-right: 5%;
-  }
-
+    } */
+    
+.footer {
+    font-family: Roboto;
+    font-weight: bold;
+    text-align: center;
+    font-size: .8em;
+    color: #9966ff;
+    background: #FAFAFA;
+    padding-top: 13px;
+    width: 100%;
+    margin-top: -10px;
+    /* padding-right: 5%; */
+}
+    
 /* topLeft Grid   */
-  .avatar {
-      border-radius: 100px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-  }
+.avatar {
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+    height: 136px;
+}
 
-  .name {
+.name {
     /* ERIK THORELLI: */
     font-family: Roboto;
     font-weight: bold;
-    font-size: 64px;
+    font-size: 3.5em;
     color: #4A4A4A;
     text-align: center;
-    padding-top: 4%;
+    padding-top: 1%;
     /* padding-bottom: 4%; */
     padding-right: 4%;
     padding-left: 4%;
-  }
+}
 
-  .name p {
-      font-size: 13px;
-      padding: 0%;
-  }
+.name p {
+    font-size: 0.2em;
+    padding: 0%;
+}
 
-  /* leftMenu Grid */
-  
-  .innerLeftMenu {
-      padding-top: 18%;
-      padding-bottom: 18%;
-      padding-left: 12%;
-      font-family: Roboto;
-      font-weight: bold;
-      font-size: 64px;
-      color: #4A4A4A;
-      text-transform: uppercase;
-  }
+/* leftMenu Grid */
 
-  /* Should be bold gray and when moused over should light up  */
-  .navItem {
+.innerLeftMenu {
+    padding-top: 18%;
+    padding-bottom: 18%;
+    padding-left: 12%;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 4em;
+    color: #4A4A4A;
+    text-transform: uppercase;
+}
+
+/* Should be bold gray and when moused over should light up  */
+.navItem {
     padding-bottom: 8%;
     
-  }
+}
 
-  .lastNavItem {
+.lastNavItem {
     /* No extra padding a.k.a. hacking it */
-  }
+    padding-bottom: 0%;
+}
 
-  .currentNavItem {
-      color: #FAFAFA;
-      padding-bottom: 8%;
-  }
+.currentNavItem {
+    color: #FAFAFA;
+    padding-bottom: 8%;
+}
+
+.currentLastNavItem {
+    color: #FAFAFA;
+    padding-bottom: 0%;
+}
 
 a {
     text-decoration: none;
@@ -119,7 +129,7 @@ a:hover {
     
     /* Websafe and bright */
     color: #9966ff;
-
+    
 }
 
 a:active {
@@ -129,31 +139,32 @@ a:active {
 
 .content-header {
     font-family: Roboto;
-    font-size: 42px;
+    font-size: 2.5em;
     font-weight: bold;
-    padding-top: 0%;
-    padding-left: 5%;
+    padding-top: 5%;
+    padding-left: 15px;
     text-transform: uppercase;
 }
 
-.content {
+.content-content {
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 1.2em;
     font-weight: 300;
-    padding-top: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
+    width: 90%;
+    
 }
 
-p {
+p, h2 {
     padding-top: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.content  a {
+.content-content  a {
     font-weight: bolder;
 }
 
-.content h2 {
+.content-content h2 {
     font-weight: 700;
     /* font-size: 18px; */
 }
@@ -162,12 +173,19 @@ p {
     text-align: center;
 }
 
+.media-player img {
+    width: 20%;
+    min-width: 250px;
+}
+
 audio {
-    width: 500px;
+    width: 35%;
+    min-width: 250px;
 }
 
 .social-links {
     /* vertical-align: middle; */
+    margin-left: 15px;
     display: flex;
     align-items:center;
 }
@@ -176,11 +194,32 @@ audio {
     width: 104px;
     max-width: 104px;
 }
-/* 
+/*
 .social-links a {
     vertical-align: top;
 } */
 
 .social-links img {
     vertical-align: middle;
+}
+
+/* Small screens */
+@media all and (max-width: 1395px) {
+    .container {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+    }
+    .leftSide {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding: 0;
+    }
+    .innerLeftMenu {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }    
 }
