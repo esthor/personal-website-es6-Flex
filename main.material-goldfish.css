@@ -175,9 +175,10 @@ a:active {
     font-size: 2.5em;
     font-weight: bold;
     padding-top: 5%;
-    padding-left: 15px;
+    padding-left: 10px;
     text-transform: uppercase;
-    color: #033649
+    color: #033649;
+    margin: 10px;
 }
 
 .content-content {
@@ -186,7 +187,7 @@ a:active {
     font-weight: 300;
     width: 90%;
     color: #031634;
-    
+    margin: 10px;
 }
 
 p, h2 {
