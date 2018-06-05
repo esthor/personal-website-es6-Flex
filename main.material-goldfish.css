@@ -276,7 +276,7 @@ audio {
     }
 
     .content-content {
-        width: 100%;
+        width: 95%;
     }
 
     .innerLeftMenu {
@@ -315,7 +315,7 @@ audio {
 
     .innerLeftMenu {
         font-size: 2em;
-        padding-top: 0%;
-        padding-bottom: 0%;
+        padding-top: .5em;
+        padding-bottom: .5em;
     }    
 }
