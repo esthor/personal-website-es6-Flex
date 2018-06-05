@@ -197,6 +197,11 @@ p, h2 {
     color: #033649;
 }
 
+.content-content p {
+    text-align: justify;
+
+}
+
 .content-content  a {
     font-weight: bolder;
     color: #033649;
@@ -204,13 +209,12 @@ p, h2 {
 
 .content-content h2 {
     font-weight: 700;
-    /* font-size: 18px; */
+    /* font-size: 18px; */  
 }
 
 .content-content a:hover {
     color: #9966ff;    
 }
-
 
 .media-player {
     text-align: center;
@@ -282,7 +286,6 @@ audio {
 
     .content-content {
         width: 95%;
-        text-align: justify;
     }
 
     .innerLeftMenu {
