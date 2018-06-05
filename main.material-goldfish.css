@@ -207,6 +207,11 @@ p, h2 {
     /* font-size: 18px; */
 }
 
+.content-content a:hover {
+    color: #9966ff;    
+}
+
+
 .media-player {
     text-align: center;
 }
@@ -277,6 +282,7 @@ audio {
 
     .content-content {
         width: 95%;
+        text-align: justify;
     }
 
     .innerLeftMenu {
