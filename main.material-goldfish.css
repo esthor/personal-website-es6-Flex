@@ -323,6 +323,11 @@ audio {
   padding-bottom: 15px;
 }
 
+/* Hover animation over div cards */
+.project-demo-flex:hover {
+  -webkit-transform: scale(1.01,1.01)
+}
+
 .project-demo-flex p {
   margin: 10px;
   font-weight: 400;
