@@ -325,7 +325,8 @@ audio {
 
 /* Hover animation over div cards */
 .project-demo-flex:hover {
-  -webkit-transform: scale(1.01,1.01)
+  -webkit-transform: scale(1.01,1.01);
+  transition: all .5s ease-in-out;
 }
 
 .project-demo-flex p {
