@@ -275,7 +275,7 @@ audio {
   font-size: 52px;
   font-style: normal;
   font-weight: 400;
-  color: #7e21df;
+  color: #7e21df; 
   text-align: center;
 }
 
@@ -429,4 +429,8 @@ audio {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
+}
+
+.text-link {
+  text-decoration: underline;
 }
