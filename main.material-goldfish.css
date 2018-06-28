@@ -339,6 +339,8 @@ audio {
 
 .project-demo-logo {
   border-radius: 20px;
+  max-width: 95%;
+  max-height: 95%
 }
 
 .project-demo {
@@ -429,6 +431,13 @@ audio {
     font-size: 2em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+  }
+  
+  .project-demo-flex {
+    width: 100%;
+    margin: 15px auto;
+    margin-right: -.2em;
+    padding-bottom: 15px;
   }
 }
 
