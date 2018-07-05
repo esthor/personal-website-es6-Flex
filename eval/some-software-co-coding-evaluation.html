@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Some Software Co. Coding Evaluation - Erik Thorelli</title>
+
+    <!-- Bring in the same font used on the Some Software Co. landing page -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+</head>
+
+<!-- Make the background the color of 'Tomorrow Night Theme' code editor from https://github.com/ChrisKempson/Tomorrow-Theme 
+and use the same font-family as the Some Software Co. landing page -->
+<!-- Fill viewport with 'height:100%' so I can flex align on whole viewport -->
+
+<body style="font-family:'Work Sans', sans-serif; background-color: #1D1F21;">
+
+    <!-- Use Flexbox model for whole page -->
+    <div style="display: flex; flex-direction: row; flex-flow: row wrap; padding: 10px; height: 95%; min-height: 600px">
+        <div style="width: 100%; display: flex; flex-direction: row; flex-flow: row wrap">
+            <div>
+                <!-- Bringing in the SVG as an object for better raster compatibility -->
+                <object class="svg" data="SomeSoftwareCo.svg" type="image/svg+xml">
+                    <!-- In real-world, I would have a jpg/png/gif as a backup here, in case of svg problems; but coding challenge said only could include 1 HTML file and 1 SVG file -->
+                    <img src="SomeSoftwareCo.svg" />
+                </object>
+            </div>
+            <!-- Display viewport sizes -->
+            <div class="viewportSizes" style="border-radius: 10px; background: #373b41; width: 20%; min-width: 251px; height: 80px; padding: 20px">
+
+                <!-- This element will hold the viewport dimensions output. If the script doesn't load, it will print out an error message instructing the user to try reloading the page. -->
+                <p id="viewportSizes" style="color: #3875B7">Viewports sizes unavailable at the moment. Try reloading the page.</p>
+
+                <script>
+                    // Declaring an event handler function
+                    windowChange();
+
+
+                    // Adding event listener for window resizing and calling our windowChange function
+                    window.addEventListener("resize", windowChange);
+
+                    // Defining our event handler function to write the width and height dimensions to the viewportSizes element
+                    // Looks super messy, but gotta have all this awesome inline styling!
+                    function windowChange() {
+                        document.getElementById('viewportSizes').innerHTML = "<span style=\"color: #f0c674\">Viewport </span><span style=\"color: #b294bb\">Dimensions</span><br><span style=\"color: #cc6666; padding-left:15px\"> width</span><span style=\"color: #8abeb7\"> = </span><span style=\"color: #c5c8c6\">" + document.documentElement.clientWidth + "<br>" + "<span style=\"color: #cc6666; padding-left:15px\"> height</span><span style=\"color: #8abeb7\"> = </span><span style=\"color: #c5c8c6\">" + document.documentElement.clientHeight;
+                    };
+
+                </script>
+
+            </div>
+            <!-- Display either mouse or touch coordinates -->
+            <div class="coordsDiv" style="border-radius: 10px; background: #373b41; width: 20%; min-width: 251px; height: 80px; padding: 20px; color: #969896">
+                <p id="coords-display">Click coordinates will show here once you click.</p>
+                <script>
+                    // Add event listener for clicks and call clickCoords whenever there are clicks
+                    window.addEventListener("click", clickCoords);
+
+                    // Event handler for clicks that prints the click coordinates to the 'coords-display' element
+                    function clickCoords(e) {
+                        // Assign X and Y coordinates from viewport
+                        var clickCoordsX = e.clientX;
+                        var clickCoordsY = e.clientY;
+
+                        // Print coordinates to the 'coords' element
+                        document.getElementById('coords-display').innerHTML = "<span style=\"color: #f0c674\">Last Click</span> <span style=\"color: #b294bb\">Coordinates</span>  <br> <span style=\"color: #cc6666; padding-left:15px\">X</span><span style=\"color: #8abeb7\"> = </span><span style=\"color: #c5c8c6\">" + clickCoordsX + "<br><span style=\"color: #cc6666; padding-left:15px\">Y</span><span style=\"color: #8abeb7\"> = </span><span style=\"color: #c5c8c6\">" + clickCoordsY;
+                    }
+
+                    // Add event listener for touches and call touchCoords whenever there are touches
+                    window.addEventListener("touchstart", touchCoords);
+
+                    // Event handler for touches that prints the touch coordinates to the 'coords-display' element
+                    function touchCoords(e) {
+                        var touchCoordsX = e.touches[0].clientX;
+                        var touchCoordsY = e.touches[0].clientY;
+
+                        // Print touch coordinates to the 'coords' element
+                        document.getElementById('coords-display').innerHTML = "<span style=\"color: #f0c674\">Last Touch</span> <span style=\"color: #b294bb\">Coordinates</span>  <br> <span style=\"color: #cc6666; padding-left:15px\">X</span><span style=\"color: #8abeb7\"> = </span><span style=\"color: #c5c8c6\">" + touchCoordsX + "<br><span style=\"color: #cc6666; padding-left:15px\">Y</span><span style=\"color: #8abeb7\"> = </span><span style=\"color: #c5c8c6\">" + touchCoordsY;
+                    }
+
+                </script>
+            </div>
+        </div>
+        <!-- Push Thoughts div to bottom to deal with the requirement of vertical and horizontally alligned SVG-->
+        <div style="margin-top: auto; margin: auto; width: 100%;"></div>
+        <!-- Display a paragraph about page design and how I approach it -->
+        <div class="thoughts" style="border-radius: 10px; background: #373b41; min-width: 200px; min-height: 100px; padding: 15px; color: #969896; margin: auto; margin-bottom: 1px;">
+            <h1>Page Design Thoughts</h1>
+            <p style="text-align: justify">I think the best approach is to first take time to sketch ideas and formulate concepts. This allows you to plan
+                and figure out what really needs to be done and think at a high level about implementation. Keeping it simple
+                is your best friend. Think in resuable components to not only make the coding easier, but to make the design
+                cohesive. Tools can speed up and make your pages more robust. But, as with anything in life, be sure to pick
+                the right tool for the job. Don't make a simpler task more complex.
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Styling the svg and divs, so we can be responsive; rest of styling is inline -->
+    <style>
+        /* Fill viewport with html and body so we can do Flex */
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Absolutely vertically and horizontally center the SVG */
+
+        .svg {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 370px;
+            height: 130px;
+        }
+
+        /* Position viewportSizes div in the top left on Desktop */
+
+        .viewportSizes {
+            margin: auto;
+            top: 0;
+            right: 1;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Position coordsDiv div in the top right on Desktop */
+
+        .coordsDiv {
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 1;
+        }
+
+        /* Spread the thoughts div and target for respsonsive calls  */
+
+        .thoughts {
+            width: 100%
+        }
+
+        /* When viewport height is less than 415px move the viewportSizes and coordsDiv lower on page so the SVG doesn't overlap */
+
+        @media (max-height: 415px) {
+            .viewportSizes {
+                margin-top: 300px;
+                margin-bottom: 10px;
+            }
+
+            .coordsDiv {
+                margin-top: 300px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            /* When viewport is smaller than 600px, align the SVG to top left */
+            .svg {
+                margin: 0;
+            }
+
+            /* When viewport is smaller than 600px, align the viewportSizes div to the top and center, but with 140px top margin to not overlap with SVG */
+            .viewportSizes {
+                margin-top: 140px;
+                margin-bottom: 10px;
+            }
+
+            /* When viewport is smaller than 600px, align the coordsDiv center and below the viewportSizes div, with some spacing */
+            .coordsDiv {
+                margin-bottom: 10px;
+                margin-top: 0px;
+            }
+        }
+    </style>
+</body>
+
+</html>

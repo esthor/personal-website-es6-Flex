@@ -344,7 +344,7 @@ audio {
 }
 
 .project-demo {
-  max-width: 95%;
+  max-width: 90%;
   max-height: 95%;
 }
 
@@ -443,4 +443,14 @@ audio {
 
 .text-link {
   text-decoration: underline;
+}
+
+.coding-eval-ul {
+  margin: 10px;
+  font-size: .7em;
+}
+
+.coding-eval-li-strong {
+  font-weight: bold;
+  
 }
