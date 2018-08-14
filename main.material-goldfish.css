@@ -417,6 +417,13 @@ audio {
   .container {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
+    /* Give our content some more space to breathe on small screen estate */
+    margin: 0px;
+    padding: 10px;
+  }
+  .footer {
+    /* When we cut the container margin, we don't want the footer to come over it */
+    margin-top: 0px;
   }
   .leftSide {
     width: 100%;
@@ -452,4 +459,13 @@ audio {
 
 .coding-eval-li-strong {
   font-weight: bold;
+}
+
+/* Very Small Screens */
+@media all and (max-width: 450px) {
+  .content-content {
+    /* Make the font smaller so it's not a jumbled justified mess */
+    font-size: 1em;
+  }
+
 }
